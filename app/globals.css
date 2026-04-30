@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-blue: #2563EB;
+  --brand-green: #16A34A;
+  --brand-cyan: #22D3EE;
+  --brand-gold: #F59E0B;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
