@@ -1,6 +1,4 @@
-import type { RequestStatus, CampaignStatus } from '@/types/database'
-
-type Status = RequestStatus | CampaignStatus
+type Status = 'pending' | 'under_review' | 'approved' | 'rejected' | 'active' | 'fulfilled' | 'closed'
 
 const statusConfig: Record<Status, { label: string; classes: string }> = {
   pending: { label: 'Pending', classes: 'bg-yellow-100 text-yellow-700' },
@@ -14,9 +12,5 @@ const statusConfig: Record<Status, { label: string; classes: string }> = {
 
 export default function StatusPill({ status }: { status: Status }) {
   const config = statusConfig[status]
-  return (
-    <span className={`status-pill ${config.classes}`}>
-      {config.label}
-    </span>
-  )
+  return <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${config.classes}`}>{config.label}</span>
 }

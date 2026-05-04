@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
+import { createClient } from '../../../lib/supabase/client'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -42,8 +42,8 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="text-2xl">📈</span>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-brand-blue to-brand-green bg-clip-text text-transparent">
+            <span className="text-2xl">&#128200;</span>
+            <h1 className="text-2xl font-bold" style={{background: 'linear-gradient(to right, #2563EB, #16A34A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
               Afferent Signal
             </h1>
           </div>
@@ -63,7 +63,7 @@ export default function LoginPage() {
                   placeholder="First Name"
                   value={firstName}
                   onChange={e => setFirstName(e.target.value)}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <input
@@ -71,7 +71,7 @@ export default function LoginPage() {
                   placeholder="Zip Code"
                   value={zipCode}
                   onChange={e => setZipCode(e.target.value)}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </>
@@ -81,7 +81,7 @@ export default function LoginPage() {
               placeholder="Email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
             <input
@@ -89,7 +89,7 @@ export default function LoginPage() {
               placeholder="Password"
               value={password}
               onChange={e => setPassword(e.target.value)}
-              className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
             {error && <p className="text-red-500 text-xs">{error}</p>}
@@ -100,7 +100,7 @@ export default function LoginPage() {
 
           <button
             onClick={() => setIsSignUp(!isSignUp)}
-            className="w-full text-center text-sm text-slate-500 mt-4 hover:text-brand-blue transition-colors"
+            className="w-full text-center text-sm text-slate-500 mt-4 hover:text-blue-600 transition-colors"
           >
             {isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Sign up"}
           </button>

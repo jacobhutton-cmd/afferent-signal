@@ -20,10 +20,7 @@ export default function MetricCard({ icon, iconBg, count, label, linkText, onLin
         </div>
       </div>
       {linkText && (
-        <button
-          onClick={onLinkClick}
-          className="text-sm text-brand-blue font-medium hover:underline"
-        >
+        <button onClick={onLinkClick} className="text-sm font-medium hover:underline" style={{color: '#2563EB'}}>
           {linkText} &rarr;
         </button>
       )}

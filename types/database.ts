@@ -51,22 +51,3 @@ export interface Campaign {
   updated_at: string
   products?: Product
 }
-
-export interface CampaignSupporter {
-  id: string
-  campaign_id: string
-  user_id: string
-  user_comment: string | null
-  joined_at: string
-}
-
-export interface Transaction {
-  id: string
-  user_id: string
-  transaction_type: TransactionType
-  amount_cents: number
-  currency: string
-  reference_id: string | null
-  metadata: Record<string, unknown>
-  created_at: string
-}
