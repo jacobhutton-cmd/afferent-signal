@@ -1,16 +1,25 @@
-import './globals.css';
-import type { ReactNode } from 'react';
-import { MobileHeader } from '@/components/mobile-header';
-import { BottomNav } from '@/components/bottom-nav';
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Afferent Signal',
+  description: 'Consumer Intent Data — Shape what your local stores carry.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-white">
-        <MobileHeader />
-        <main className="mx-auto max-w-md px-4 py-5 pb-28">{children}</main>
-        <BottomNav />
+      <body className={`${inter.className} bg-slate-50 min-h-screen`}>
+        {children}
       </body>
     </html>
-  );
+  )
 }
