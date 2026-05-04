@@ -1,0 +1,63 @@
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #1a1a2e;
+  color: white;
+  padding: 24px 20px 16px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.tab-bar {
+  display: flex;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  color: #1a1a2e;
+  border-bottom: 2px solid #1a1a2e;
+  font-weight: 600;
+  margin-bottom: -2px;
+}
+
+.app-main {
+  flex: 1;
+  padding: 24px 20px;
+}
+
+.error-banner {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
